@@ -1,0 +1,20 @@
+<script>
+  const users = {
+    BCSO: "445566",
+    Miasto: "Miasto22",
+    JohnPepe: "449449"
+  };
+
+  function login() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (users[username] && users[username] === password) {
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("user", username);
+      window.location.href = "dashboard.html";
+    } else {
+      document.querySelector(".error").classList.remove("hidden");
+    }
+  }
+</script>

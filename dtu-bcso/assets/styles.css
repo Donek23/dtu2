@@ -1,0 +1,117 @@
+.bg-gray {
+  background-color: #111827;
+}
+.font-sans {
+  font-family: system-ui, sans-serif;
+}
+.text-white {
+  color: white;
+}
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.p-4 {
+  padding: 1rem;
+}
+.mt-8 {
+  margin-top: 2rem;
+}
+.login-box {
+  background: #1f2937;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.sidebar {
+  width: 250px;
+  background: #2d0b4e;
+  height: 100vh;
+  padding: 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.sidebar h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar li {
+  margin: 0.5rem 0;
+}
+.sidebar button {
+  width: 100%;
+  background: #6d28d9;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sidebar .logout-btn {
+  background: #ef4444;
+}
+.main-content {
+  margin-left: 250px;
+  padding: 2rem;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: none;
+  background: #1f2937;
+  color: white;
+}
+button {
+  background: #7c3aed;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #6b219c;
+}
+#graph-container {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #4B5563;
+  position: relative;
+  margin-top: 1rem;
+}
+.node {
+  width: 60px;
+  height: 60px;
+  border-radius: 9999px;
+  background: #7c3aed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  cursor: pointer;
+}
+.error {
+  color: #ef4444;
+  margin-bottom: 1rem;
+}

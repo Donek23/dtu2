@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>DTU BCSO - Panel</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body class="bg-gray text-white font-sans">
+  <aside class="sidebar">
+    <h2>DTU BCSO</h2>
+    <ul>
+      <li><button onclick="openTab('podejrzani')">Podejrzani</button></li>
+      <li><button onclick="openTab('pojazdy')">Pojazdy</li>
+      <li><button onclick="openTab('raporty')">Raporty</li>
+      <li><button onclick="openTab('siatka')">Siatka Powiązań</li>
+      <li><button onclick="downloadBackup()">Pobierz backup</li>
+      <li><button onclick="logout()" class="logout-btn">Wyloguj się</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <h1>BAZA DANYCH DTU BCSO</h1>
+      <input type="text" placeholder="Szukaj..." oninput="searchData(this.value)" />
+    </header>
+
+    <section id="podejrzani" class="tab active">
+      <h2>Podejrzani</h2>
+      <input type="text" id="input-podejrzani" />
+      <button onclick="saveEntry('podejrzani')">Zapisz</button>
+      <ul id="list-podejrzani"></ul>
+    </section>
+
+    <section id="pojazdy" class="tab hidden">
+      <h2>Pojazdy</h2>
+      <input type="text" id="input-pojazdy" />
+      <button onclick="saveEntry('pojazdy')">Zapisz</button>
+      <ul id="list-pojazdy"></ul>
+    </section>
+
+    <section id="raporty" class="tab hidden">
+      <h2>Raporty</h2>
+      <input type="text" id="input-raporty" />
+      <button onclick="saveEntry('raporty')">Zapisz</button>
+      <ul id="list-raporty"></ul>
+    </section>
+
+    <section id="siatka" class="tab hidden">
+      <h2>Siatka powiązań</h2>
+      <input type="text" id="input-node" />
+      <button onclick="addNode()">Dodaj węzeł</button>
+      <div id="graph-container"></div>
+    </section>
+
+    <section id="historia" class="tab hidden">
+      <h2>Historia zmian</h2>
+      <ul id="change-history"></ul>
+    </section>
+
+    <footer class="mt-8 text-center text-sm text-gray-400">
+      &copy; DTU BCSO | Wszelkie prawa zastrzeżone
+    </footer>
+  </main>
+
+  <script src="data/scripts.js"></script>
+</body>
+</html>
